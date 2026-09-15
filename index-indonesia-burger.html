@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Savior</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style-responsive.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="brand">
+            <img src="logo.png" alt="Student Savior Logo">
+            <span>Student Savior</span>
+        </div>
+
+        <button class="menu-btn" aria-label="Buka menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="nav-menu">
+            <a href="#home">Beranda</a>
+            <a href="#services">Layanan</a>
+            <a href="#about">Tentang</a>
+            <a href="#" class="login-btn">Masuk</a>
+        </nav>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <main id="home">
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="small-title">SELAMAT DATANG</p>
+
+                <h1>
+                    Semua kebutuhan mahasiswa,
+                    <span>dalam satu tempat.</span>
+                </h1>
+
+                <p class="description">
+                    Student Savior membantu mahasiswa
+                    menemukan informasi, sumber belajar,
+                    dan layanan dalam satu tempat.
+                </p>
+
+                <a href="#services" class="explore-btn">
+                    Lihat Layanan
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- SERVICES -->
+        <section id="services" class="services">
+
+            <p class="section-label">LAYANAN KAMI</p>
+
+            <h2>
+                Membantu mahasiswa,
+                <span>selangkah demi selangkah.</span>
+            </h2>
+
+            <div class="service-list">
+
+                <div class="service-card">
+                    <div class="icon">📚</div>
+                    <h3>Sumber Belajar</h3>
+                    <p>
+                        Temukan materi dan sumber
+                        untuk membantu belajar.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">🎓</div>
+                    <h3>Layanan Mahasiswa</h3>
+                    <p>
+                        Akses layanan yang berguna
+                        untuk kebutuhan mahasiswa.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">💡</div>
+                    <h3>Bantuan Mahasiswa</h3>
+                    <p>
+                        Dapatkan informasi dan bantuan
+                        saat kamu membutuhkannya.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+        <section id="about" class="about">
+
+            <p class="section-label">TENTANG KAMI</p>
+
+            <h2>
+                Dibuat untuk membuat
+                <span>hidup mahasiswa lebih mudah.</span>
+            </h2>
+
+            <p>
+                Student Savior adalah platform sederhana
+                untuk mengakses layanan dan informasi
+                dalam satu tempat.
+            </p>
+
+        </section>
+
+
+        <!-- QUOTE -->
+        <section class="quote">
+
+            <div class="quote-line"></div>
+
+            <h2>
+                “From Student for Student”
+            </h2>
+
+            <p>
+                Platform untuk mahasiswa,
+                dibuat oleh mahasiswa.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>© 2026 Student Savior</p>
+
+    </footer>
+
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const navMenu = document.querySelector('#nav-menu');
+
+        menuBtn.addEventListener('click', () => {
+            const isOpen = navMenu.classList.toggle('show');
+            menuBtn.setAttribute('aria-expanded', isOpen);
+        });
+
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('show');
+                menuBtn.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
+
+</body>
+</html>
